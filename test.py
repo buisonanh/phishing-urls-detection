@@ -1,23 +1,18 @@
 import pandas as pd
-from  urllib.parse import urlparse
-import numpy as np
+from urllib.parse import urlparse
 
-dump = pd.read_csv('dump-2020-12-15.csv')
-urls = dump['url']
-urls = np.array(urls)
+# Load the dataset into a pandas DataFrame
+legitimate2 = pd.read_csv('dump-2020-12-15.csv')
 
-domains = {}
-for url in urls:
-    parsed_url = urlparse(url)
-    domain = parsed_url.netloc
-    if domain not in domains:
-        domains[domain] = url
+# Extract the domain name from each URL
+legitimate2['domain'] = legitimate2['url'].apply(lambda x: urlparse(x).netloc)
 
-urls = np.array(domains.values())
+# Group the URLs by domain name and select one URL to keep
+legitimate2 = legitimate2.groupby('domain').apply(lambda x: x.sort_values('date', ascending=False).iloc[0])
 
+# Drop duplicates to keep only one URL per domain
+legitimate2 = legitimate2.drop_duplicates(subset='domain', keep='first')
 
-df = pd.DataFrame(urls, columns=['url'])
-df.to_csv('legitimate_urls_2', index=False)
-
-
-
+# Select only the url column and save the result
+legit2 = legitimate2['url']
+legit2.to_csv('legit2.csv', index=False)
