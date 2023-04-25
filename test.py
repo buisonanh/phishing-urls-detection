@@ -1,32 +1,23 @@
 import pandas as pd
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.linear_model import LogisticRegression
+from  urllib.parse import urlparse
+import numpy as np
 
-# Load the dataset
-dataset = pd.read_csv('both_urls_dataset.csv')
-url_data = dataset[['url', 'status']]
+dump = pd.read_csv('dump-2020-12-15.csv')
+urls = dump['url']
+urls = np.array(urls)
 
-# Create a bag-of-words matrix
-    vectorizer = CountVectorizer()
-    X = vectorizer.fit_transform(url_data['url'])
+domains = {}
+for url in urls:
+    parsed_url = urlparse(url)
+    domain = parsed_url.netloc
+    if domain not in domains:
+        domains[domain] = url
 
-# Create the target variable
-y = url_data['status']
+urls = np.array(domains.values())
 
-# Train the logistic regression model
-lr_model = LogisticRegression(solver='lbfgs', max_iter=5000)
-lr_model.fit(X, y)
 
-# Make predictions on new URLs
-new_urls = ['http://www.youtube.com', 'https://ipfs.io/ipfs/QmcW7EJ188qhHQEpdA9AwMK2tNTg2R7yTckjZtN4HzSBUp/xand1.html#redacted@abuse.ionos.com', 'facebook.com']
-X_new = vectorizer.transform(new_urls)
-y_pred = lr_model.predict(X_new)
-
-# Print the predictions
-print(y_pred)
+df = pd.DataFrame(urls, columns=['url'])
+df.to_csv('legitimate_urls_2', index=False)
 
 
 
-from sklearn.metrics import accuracy_score
-accuracy = accuracy_score(y, y_pred)
-print('Accuracy:', accuracy)
