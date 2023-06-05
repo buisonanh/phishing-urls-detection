@@ -1,4 +1,4 @@
-#Phishing URL Detection Machine Learning Model
+##Phishing URL Detection Machine Learning Model
 This repository contains a machine learning model for detecting phishing URLs. The model uses [insert name of ML algorithm/library/framework] to classify URLs as either legitimate or phishing.
 
 #Table of Contents
