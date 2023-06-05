@@ -1,5 +1,4 @@
 # Phishing URL Detection Machine Learning Model
-https://ray.so/#code=bW9kdWxlLmV4cG9ydHMgPSBsZWZ0cGFkOwoKZnVuY3Rpb24gbGVmdHBhZChzdHIsIGxlbiwgY2gpIHsKICBzdHIgPSBTdHJpbmcoc3RyKTsKICB2YXIgaSA9IC0xOwoKICBpZiAoIWNoICYmIGNoICE9PSAwKSBjaCA9ICcgJzsKCiAgbGVuID0gbGVuIC0gc3RyLmxlbmd0aDsKCiAgd2hpbGUgKGkrKyA8IGxlbikgewogICAgc3RyID0gY2ggKyBzdHI7CiAgfQogIHJldHVybiBzdHI7Cn0&padding=32
 
 ## Table of Contents
   1. [Introduction](#introduction)<br>
