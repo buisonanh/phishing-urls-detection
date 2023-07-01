@@ -1,0 +1,3 @@
+- Xử lý imbalance 
+- Bias trong tập train test
+- Thêm phần EDA: Tại sao lại dùng các features (vẽ chart thể hiện)
