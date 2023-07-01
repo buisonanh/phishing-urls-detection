@@ -11,18 +11,6 @@
 ## <a name="introduction"></a> Introduction
 This repository contains a machine-learning model for detecting phishing URLs. The model uses [sklearn] to classify URLs as either legitimate or phishing.
 
-## <a name="usage"></a> Usage
-Writing...
-
-```python3
-import phishing_url_detector
-
-model = phishing_url_detector.PhishingURLDetector()
-result = model.detect_url('http://example.com')
-
-print(result)
-```
-
 ## <a name="datasets"> Datasets
 This project requires a large number of authentic (0) and phishing (1) URLs.
 
