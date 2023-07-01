@@ -2,12 +2,11 @@
 
 ## Table of Contents
   1. [Introduction](#introduction)<br>
-  2. [Usage](#usage)<br>
-  3. [Datasets](#datasets)<br>
-  4. [Model Training](#model-training)<br>
-  5. [Evaluation](#evaluation)<br>
-  6. [Contributing](#contributing)<br>
-  7. [License](#license)
+  2. [Datasets](#datasets)<br>
+  3. [Model Training](#model-training)<br>
+  4. [Evaluation](#evaluation)<br>
+  5. [Contributing](#contributing)<br>
+  6. [License](#license)
 
 ## <a name="introduction"></a> Introduction
 This repository contains a machine-learning model for detecting phishing URLs. The model uses [sklearn] to classify URLs as either legitimate or phishing.
