@@ -10,7 +10,7 @@
   7. [Evaluation](#evaluation)
 
 ## <a name="introduction"> Introduction</a>
-This repository contains a machine-learning model for detecting phishing URLs. The model uses [sklearn]'s Logistic Regression to classify URLs as either legitimate or phishing.
+This repository showcases a machine-learning model for detecting phishing URLs using NLP techniques. To enhance the model's performance, additional features are extracted from the URLs. However, after thorough analysis, only a select subset of these features is utilized. Before inputting the URLs, the text data is vectorized by converting the URL and domain into numerical representations. After thorough testing and evaluation, the model successfully classifies URLs as legitimate or phishing by leveraging vectorized features. Based on careful analysis, [sklearn]'s Logistic Regression algorithm was selected over Bernoulli Naive Bayes for its superior effectiveness in classification.
 
 ## <a name="datasets"> Datasets</a>
 For training and evaluating the phishing URL detection model, we utilized multiple datasets from various sources. The primary datasets were obtained from the University of New Brunswick (UNB) URL Datasets (https://www.unb.ca/cic/datasets/url-2016.html), while additional phishing URLs were obtained from Phishtank Developer Info (https://www.phishtank.com/developer_info.php).
@@ -31,11 +31,11 @@ We selected specific features to extract from the URLs for further analysis. The
  -  Redirection
  -  https_Domain
 
-To gain insights from the extracted features, we conducted exploratory data analysis (EDA) and represented the findings using bar charts. The bar charts visually illustrate the distribution and characteristics of each feature (except the Domain feature), providing a comprehensive understanding of the data.
+We conducted exploratory data analysis (EDA) to gain insights from the extracted features and represented the findings using bar charts. The bar charts visually illustrate the distribution and characteristics of each feature (except the Domain feature), providing a comprehensive understanding of the data.
 
 ![EDA Image](imgs/eda-graphs.png)
 
-Upon evaluation, the decision was made to incorporate only URL_Length and URL_Depth into the model. This decision was made based on the limited availability of data in the other features, where either the data did not sufficiently represent both labels or the features held limited significance in the context of the study. Therefore, URL_Length and URL_Depth were deemed the most relevant and informative features for the model.
+Upon evaluation, the decision was made to incorporate only URL_Length and URL_Depth into the model. This decision was made based on the limited availability of data in the other features, where either the data did not sufficiently represent both labels or the features held little significance in the context of the study. Therefore, URL_Length and URL_Depth were deemed the most relevant and informative features for the model.
 
 ## <a name="train-test-split"> Train Test Split</a>
 The dataset was randomly divided into a training set and a test set, with a ratio of 75% for the training set and 25% for the test set. After splitting the dataset into a training set and a test set, we examined the distribution of target labels in the training set to check for any bias:
@@ -49,7 +49,7 @@ train_label_counts = {
 print('Label 0 count:', train_label_counts['0']) # Label 0 count: 26492
 print('Label 1 count:', train_label_counts['1']) # Label 1 count: 26573
 ```
-In this case, there is a slight difference in the counts of label 0 and label 1, but the difference is not significant. The counts are relatively balanced, with label 1 having a slightly higher count than label 0.
+In this case, there is a slight difference in the counts of label 0 and label 1, but the difference is insignificant. The counts are relatively balanced, with label 1 having a slightly higher count than label 0.
 
 ## <a name="logistic-regression"> Logistic Regression
 Writing...
