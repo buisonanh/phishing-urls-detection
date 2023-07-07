@@ -55,7 +55,6 @@ In this case, there is a slight difference in the counts of label 0 and label 1,
 Writing...
 
 ## <a name="naive-bayes"> Bernoulli Naive Bayes
->>>>>>> dda422d8c2b1e1774d4cbbe53aae1acba4d518ea
 Writing...
 
 ## <a name="evaluation"> Evaluation
