@@ -37,7 +37,7 @@ To gain insights from the extracted features, we conducted exploratory data anal
 
 Upon evaluation, the decision was made to incorporate only URL_Length and URL_Depth into the model. This decision was made based on the limited availability of data in the other features, where either the data did not sufficiently represent both labels or the features held limited significance in the context of the study. Therefore, URL_Length and URL_Depth were deemed the most relevant and informative features for the model.
 
-## <a name="model-training"> Model Training
+## <a name="logistic-regression"> Logistic Regression
 Writing...
 
 ## <a name="evaluation"> Evaluation
