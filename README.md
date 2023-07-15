@@ -6,8 +6,7 @@
   3. [Exploratory Data Analysis](#eda)<br>
   4. [Train Test Split](#train-test-split)<br>
   5. [Logistic Regression](#logistic-regression)<br>
-  6. [Bernoulli Naive Bayes](#naive-bayes)<br>
-  7. [Evaluation](#evaluation)
+  6. [Evaluation](#evaluation)
 
 ## <a name="introduction"> Introduction</a>
 This repository showcases a machine-learning model for detecting phishing URLs using NLP techniques. To enhance the model's performance, additional features are extracted from the URLs. However, after thorough analysis, only a select subset of these features is utilized. Before inputting the URLs, the text data is vectorized by converting the URL and domain into numerical representations. After thorough testing and evaluation, the model successfully classifies URLs as legitimate or phishing by leveraging vectorized features. Based on careful analysis, [sklearn]'s Logistic Regression algorithm was selected over Bernoulli Naive Bayes for its superior effectiveness in classification.
@@ -35,7 +34,7 @@ We conducted exploratory data analysis (EDA) to gain insights from the extracted
 
 ![EDA Image](imgs/eda-graphs.png)
 
-Upon evaluation, the decision was made to incorporate only URL_Length and URL_Depth into the model. This decision was made based on the limited availability of data in the other features, where either the data did not sufficiently represent both labels or the features held little significance in the context of the study. Therefore, URL_Length and URL_Depth were deemed the most relevant and informative features for the model.
+Upon evaluation, the decision was made to incorporate only URL_Length and URL_Depth into the model. This decision was made based on the limited availability of data in the other features, where either the data did not sufficiently represent both labels or the features held little significance in the study context. Therefore, URL_Length and URL_Depth were deemed the most relevant and informative features for the model.
 
 ## <a name="train-test-split"> Train Test Split</a>
 The dataset was randomly divided into a training set and a test set, with a ratio of 75% for the training set and 25% for the test set. After splitting the dataset into a training set and a test set, we examined the distribution of target labels in the training set to check for any bias:
@@ -52,11 +51,21 @@ print('Label 1 count:', train_label_counts['1']) # Label 1 count: 26573
 In this case, there is a slight difference in the counts of label 0 and label 1, but the difference is insignificant. The counts are relatively balanced, with label 1 having a slightly higher count than label 0.
 
 ## <a name="logistic-regression"> Logistic Regression
-Writing...
-
-## <a name="naive-bayes"> Bernoulli Naive Bayes
-Writing...
+Following the execution of the grid-search and subsequent testing, the obtained optimal parameters are presented below. Subsequently, the logistic regression model was fitted using the training set:
+```python
+logreg = LogisticRegression(C= 0.01, class_weight= 'balanced', max_iter= 500, penalty= 'l2', random_state=42)
+lr_lbfgs = logreg.fit(x_train,y_train)
+```
+Then, predictions were generated for the test set:
+```python
+y_pred_lr=logreg.predict(x_test)
+```
 
 ## <a name="evaluation"> Evaluation
-Writing...
+The accuracy and scores of the prediction are as follows:
+- Accuracy: 0.97
+- F1 score: 0.97
+- Jaccard score: 0.9461639058413251
+
+
 
