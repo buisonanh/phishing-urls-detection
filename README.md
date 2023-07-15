@@ -62,10 +62,12 @@ y_pred_lr=logreg.predict(x_test)
 ```
 
 ## <a name="evaluation"> Evaluation
-The accuracy and scores of the prediction are as follows:
+The accuracy, scores and confusion matrix of the prediction are as follows:
 - Accuracy: 0.97
 - F1 score: 0.97
 - Jaccard score: 0.9461639058413251
+
+![EDA Image](imgs/confusion-matrix.png)
 
 
 
