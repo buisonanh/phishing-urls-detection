@@ -9,7 +9,7 @@
   6. [Evaluation](#evaluation)
 
 ## <a name="introduction"> Introduction</a>
-This repository showcases a machine-learning model for detecting phishing URLs using NLP techniques. To enhance the model's performance, additional features are extracted from the URLs. However, after thorough analysis, only a select subset of these features is utilized. Before inputting the URLs, the text data is vectorized by converting the URL and domain into numerical representations. After thorough testing and evaluation, the model successfully classifies URLs as legitimate or phishing by leveraging vectorized features. Based on careful analysis, [sklearn]'s Logistic Regression algorithm was selected over Bernoulli Naive Bayes for its superior effectiveness in classification.
+This project aims to detect phishing URLs through the application of the Logistic Regression model from the scikit-learn library. To enhance the detection process, Natural Language Processing (NLP) techniques are employed. The combination of these methods enhances the capability to identify potential phishing URLs in a proficient and user-friendly manner.
 
 ## <a name="datasets"> Datasets</a>
 For training and evaluating the phishing URL detection model, we utilized multiple datasets from various sources. The primary datasets were obtained from the University of New Brunswick (UNB) URL Datasets (https://www.unb.ca/cic/datasets/url-2016.html), while additional phishing URLs were obtained from Phishtank Developer Info (https://www.phishtank.com/developer_info.php).
