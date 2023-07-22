@@ -1,12 +1,27 @@
 Data:
 - Besides add URLs from other sources, try to use oversampling techniques to deal with the imbalance problem
 
+
 Features:
 - Use more techniques for sellecting Features to extract
-- After extract, dig deeper on the EDA of features and datasets.
+- After extract, dig deeper on the EDA of features and datasets
+- EXTREMELY focus on EDA process
+
 
 Model:
 - Use one or more models rather than just Logistic Regression for comparison in accuracy and performance
 
+
 Evaluation:
 - Test on datasets that different from train and test set
+
+
+
+For ML Engineer and MLOps career:
+- Skills to learn:
+    + Data Analysis and features engineering
+    + ML algorithms
+    + ML Pipelines
+    + DevOps (CI/CD)
+    + Software Engineering
+
