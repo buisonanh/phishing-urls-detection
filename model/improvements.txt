@@ -1,0 +1,12 @@
+Data:
+- Besides add URLs from other sources, try to use oversampling techniques to deal with the imbalance problem
+
+Features:
+- Use more techniques for sellecting Features to extract
+- After extract, dig deeper on the EDA of features and datasets.
+
+Model:
+- Use one or more models rather than just Logistic Regression for comparison in accuracy and performance
+
+Evaluation:
+- Test on datasets that different from train and test set
