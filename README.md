@@ -25,7 +25,10 @@ To address the data imbalance, we augmented the dataset by incorporating an appr
 ## <a name="eda"> Exploratory Data Analysis</a>
 We conducted exploratory data analysis (EDA) to gain insights from the extracted features and represented the findings using bar charts. The bar charts visually illustrate the distribution and characteristics of each feature (except the Domain feature), providing a comprehensive understanding of the data.
 
-![EDA Image](imgs/eda-graphs.png)
+![EDA Image1](imgs/historic-graph.png)
+
+![EDA Image2](imgs/density-map.png)
+
 
 
 ## <a name="feature-extraction"> Feature Extraction</a>
@@ -65,6 +68,8 @@ The accuracy, scores, and confusion matrix of the prediction are as follows:
 - F1 score: 0.9842
 - Jaccard score: 0.9691
 
+![EDA Image](imgs/confusion-matrix-lr.png)
+
 ## <a name="svm"> Support Vector Machines (SVM)</a>
 In addition to Logistic Regression, Support Vector Machines (SVM) are used as an alternative machine learning model for phishing URL detection. The SVM model is trained and evaluated similarly to Logistic Regression, allowing for a comparison of their performance.
 ```python
@@ -78,9 +83,22 @@ The accuracy, scores, and confusion matrix of the prediction are as follows:
 - F1 score: 0.9968
 - Jaccard score: 0.9936
 
+![EDA Image](imgs/confusion-matrix-svm.png)
+
 ## <a name="testing"> Testing</a>
 The trained models are put to the test using an external dataset containing URLs with their corresponding labels. Feature extraction is applied to this dataset, and both the Logistic Regression and SVM models are used to make predictions. The performance of the models on this test dataset is evaluated, providing an assessment of their real-world applicability.
 
+The TEST accuracy, scores, and confusion matrix of the prediction by <strong>Logistic Regression</strong> model are as follows:
+Jaccard score: 0.05
+Accuracy: 0.49
+F1 score: 0.65
+![EDA Image](imgs/confusion-matrix-lr-test.png)
+
+The TEST accuracy, scores, and confusion matrix of the prediction by <strong>SVM</strong> model are as follows:
+Jaccard score: 0.05
+Accuracy: 0.49
+F1 score: 0.65
+![EDA Image](imgs/confusion-matrix-svm-test.png)
 
 ## <a> Summary</a>
 In summary, this project combines data preprocessing, feature extraction, exploratory data analysis, and machine learning techniques to create an effective phishing URL detection model. The utilization of Logistic Regression and SVM, along with careful feature selection, ensures a robust and reliable solution for identifying potential phishing URLs.
