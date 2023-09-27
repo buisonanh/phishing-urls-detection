@@ -90,16 +90,16 @@ The accuracy, scores, and confusion matrix of the prediction are as follows:
 The trained models are put to the test using an external dataset containing URLs with their corresponding labels. Feature extraction is applied to this dataset, and both the Logistic Regression and SVM models are used to make predictions. The performance of the models on this test dataset is evaluated, providing an assessment of their real-world applicability.
 
 The TEST accuracy, scores, and confusion matrix of the prediction by <strong>Logistic Regression</strong> model are as follows:
-Jaccard score: 0.05
-Accuracy: 0.49
-F1 score: 0.65
+- Jaccard score: 0.05
+- Accuracy: 0.49
+- F1 score: 0.65
 
 ![EDA Image](imgs/confusion-matrix-lr-test.png)
 
 The TEST accuracy, scores, and confusion matrix of the prediction by <strong>SVM</strong> model are as follows:
-Jaccard score: 0.05
-Accuracy: 0.49
-F1 score: 0.65
+- Jaccard score: 0.05
+- Accuracy: 0.49
+- F1 score: 0.65
 
 ![EDA Image](imgs/confusion-matrix-svm-test.png)
 
