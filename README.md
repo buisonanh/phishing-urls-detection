@@ -9,6 +9,7 @@
   6. [Logistic Regression](#logistic-regression)<br>
   7. [Support Vector Machines (SVM)](#svm)<br>
   8. [Testing](#testing)<br>
+  9. [Summary](#summary)
 
 ## <a name="introduction"> Introduction</a>
 This project focuses on detecting phishing URLs using machine learning techniques, specifically the Logistic Regression and Support Vector Machines (SVM) models from the scikit-learn library. In addition to these models, Natural Language Processing (NLP) techniques are applied to enhance the detection accuracy. The project aims to provide an efficient and user-friendly solution for identifying potential phishing URLs.
@@ -92,13 +93,15 @@ The TEST accuracy, scores, and confusion matrix of the prediction by <strong>Log
 Jaccard score: 0.05
 Accuracy: 0.49
 F1 score: 0.65
+
 ![EDA Image](imgs/confusion-matrix-lr-test.png)
 
 The TEST accuracy, scores, and confusion matrix of the prediction by <strong>SVM</strong> model are as follows:
 Jaccard score: 0.05
 Accuracy: 0.49
 F1 score: 0.65
+
 ![EDA Image](imgs/confusion-matrix-svm-test.png)
 
-## <a> Summary</a>
+## <a name="testing"> Summary</a>
 In summary, this project combines data preprocessing, feature extraction, exploratory data analysis, and machine learning techniques to create an effective phishing URL detection model. The utilization of Logistic Regression and SVM, along with careful feature selection, ensures a robust and reliable solution for identifying potential phishing URLs.
