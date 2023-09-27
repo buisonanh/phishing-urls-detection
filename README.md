@@ -19,9 +19,9 @@ For training and evaluating the phishing URL detection model, we utilized multip
 
 The datasets from UNB included:
  -  Legitimate URLs: A collection of over 35,000 genuine and legitimate URLs.
- -  Phishing URLs: An initial set of more than 9,000 phishing URLs.
+ -  Phishing URLs: An initial set of less than 10,000 phishing URLs.
 
-To address the data imbalance, we augmented the dataset by incorporating an approximate additional 26,000 phishing URLs sourced from Phishtank, ensuring a more balanced representation of phishing data.
+To address the data imbalance, we augmented the dataset by incorporating an additional over 25,000 phishing URLs sourced from Phishtank, ensuring a more balanced representation of phishing data. This increase the total number of URLs to 70,754.
 
 ## <a name="eda"> Exploratory Data Analysis</a>
 We conducted exploratory data analysis (EDA) to gain insights from the extracted features and represented the findings using bar charts. The bar charts visually illustrate the distribution and characteristics of each feature (except the Domain feature), providing a comprehensive understanding of the data.
