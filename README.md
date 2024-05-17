@@ -1,5 +1,4 @@
 # Phishing URL Detection Machine Learning Model
-This project focuses on detecting phishing URLs using machine learning techniques, specifically the Logistic Regression and Support Vector Machines (SVM) models from the scikit-learn library. In addition to these models, Natural Language Processing (NLP) techniques are applied to enhance the detection accuracy. The project aims to provide an efficient and user-friendly solution for identifying potential phishing URLs.
 
 ## Table of Contents
   1. [Introduction](#introduction)<br>
